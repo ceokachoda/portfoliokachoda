@@ -64,8 +64,11 @@ export function ContactSection() {
                 className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-sm text-white placeholder:text-white/20 focus:outline-none focus:border-[#ffcadd]/50 focus:bg-white/10 transition-all duration-300 resize-none"
               ></textarea>
             </div>
-            <button type="submit" className="group relative inline-flex items-center justify-center overflow-hidden rounded-full border border-[#ffcadd]/30 bg-[#ffcadd]/10 px-8 py-4 w-full text-[10px] md:text-xs font-semibold uppercase tracking-[0.25em] text-[#ffcadd] backdrop-blur-md transition-all duration-500 hover:bg-[#ffcadd]/20 hover:shadow-[0_0_30px_-5px_rgba(255,202,221,0.3)] hover:-translate-y-1">
-              <span className="relative z-10 transition-transform duration-500 group-hover:scale-105">Send Message</span>
+            <button type="submit" className="group relative inline-flex items-center justify-center overflow-hidden rounded-full border border-[#ffcadd]/40 bg-gradient-to-r from-[#ffcadd]/10 via-[#ffcadd]/20 to-[#ffcadd]/10 px-8 py-4 w-full text-[10px] md:text-xs font-semibold uppercase tracking-[0.25em] text-white drop-shadow-md backdrop-blur-md transition-all duration-700 shadow-[0_0_20px_rgba(255,202,221,0.15)] hover:border-[#ffcadd]/80 hover:from-[#ffcadd]/20 hover:via-[#ffcadd]/30 hover:to-[#ffcadd]/20 hover:shadow-[0_0_40px_rgba(255,202,221,0.4)] hover:-translate-y-1 focus:outline-none focus:ring-1 focus:ring-[#ffcadd]/50 active:scale-[0.98]">
+              <span className="relative z-10 transition-transform duration-500 group-hover:scale-105">Let&apos;s Build The Future</span>
+              <div className="absolute inset-0 z-0 flex items-center justify-center pointer-events-none">
+                <div className="h-full w-full translate-x-[-100%] bg-gradient-to-r from-transparent via-[#ffcadd]/30 to-transparent transition-transform duration-1000 ease-in-out group-hover:translate-x-[100%]"></div>
+              </div>
             </button>
           </form>
         </div>

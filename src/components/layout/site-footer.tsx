@@ -14,23 +14,29 @@ export function SiteFooter() {
   ];
 
   return (
-    <footer className="relative w-full border-t border-white/5 bg-black/20 backdrop-blur-md pt-20 pb-12 mt-32">
-      <div className="mx-auto w-full max-w-site px-5 sm:px-8 lg:px-12 flex flex-col items-center justify-center text-center">
+    <footer className="relative w-full border-t border-[#ffcadd]/10 bg-black/40 backdrop-blur-[20px] pt-24 pb-12 mt-32 overflow-hidden">
+      {/* Ambient background glow */}
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[300px] bg-[#ffcadd]/5 blur-[120px] rounded-[100%] pointer-events-none z-0 translate-y-1/2" />
+      
+      <div className="mx-auto w-full max-w-site px-5 sm:px-8 lg:px-12 flex flex-col items-center justify-center text-center relative z-10">
         
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="mb-12"
+          transition={{ duration: 1, ease: "easeOut" }}
+          className="mb-16 relative"
         >
-          <h2 className="text-3xl md:text-5xl font-display font-medium text-white mb-4 tracking-wide drop-shadow-md">
+          {/* Subtle center glow behind text */}
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[200px] h-[200px] bg-[#ffcadd]/10 blur-[80px] rounded-full pointer-events-none z-0" />
+          
+          <h2 className="relative z-10 text-4xl md:text-6xl font-display font-medium text-transparent bg-clip-text bg-gradient-to-b from-white to-[#ffcadd]/80 mb-6 tracking-[0.1em] drop-shadow-xl">
             Karan Malakar
           </h2>
-          <p className="text-sm md:text-base text-white/70 uppercase tracking-[0.2em] mb-4">
-            Founder • Builder • Designer In Progress
+          <p className="relative z-10 text-xs md:text-sm text-white/70 uppercase tracking-[0.3em] mb-5 font-light drop-shadow-sm">
+            Founder • Builder • Ecosystem Architect
           </p>
-          <p className="text-[10px] md:text-xs text-[#ffcadd] uppercase tracking-[0.3em] font-medium">
+          <p className="relative z-10 text-[9px] md:text-[10px] text-[#ffcadd] uppercase tracking-[0.4em] font-medium drop-shadow-[0_0_15px_rgba(255,202,221,0.5)]">
             Shillong → Guwahati → Beyond
           </p>
         </motion.div>
@@ -39,8 +45,8 @@ export function SiteFooter() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: 1, delay: 0.2 }}
-          className="flex flex-wrap justify-center gap-6 md:gap-10 mb-16"
+          transition={{ duration: 1.2, delay: 0.3 }}
+          className="flex flex-wrap justify-center gap-6 sm:gap-8 md:gap-12 mb-20 relative z-10"
         >
           {links.map((link) => (
             <a
@@ -48,10 +54,11 @@ export function SiteFooter() {
               href={link.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xs uppercase tracking-[0.15em] text-white/50 hover:text-white transition-colors duration-300 relative group"
+              className="text-[10px] sm:text-xs uppercase tracking-[0.2em] text-white/50 hover:text-[#ffcadd] transition-colors duration-500 relative group"
             >
               {link.name}
-              <span className="absolute -bottom-2 left-0 w-0 h-[1px] bg-white transition-all duration-300 group-hover:w-full"></span>
+              <span className="absolute -bottom-3 left-1/2 -translate-x-1/2 w-0 h-[2px] bg-[#ffcadd]/50 transition-all duration-500 group-hover:w-full blur-[1px]"></span>
+              <span className="absolute -bottom-3 left-1/2 -translate-x-1/2 w-0 h-[1px] bg-[#ffcadd] transition-all duration-500 group-hover:w-full"></span>
             </a>
           ))}
         </motion.div>

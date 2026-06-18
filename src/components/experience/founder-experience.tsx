@@ -76,11 +76,11 @@ export function FounderExperience({ onExplore }: { onExplore?: () => void }) {
               {founderProfile.name}
             </h1>
 
-            <p className="relative z-10 mt-6 sm:mt-8 md:mt-10 max-w-xl text-[9px] sm:text-[10px] md:text-sm font-light uppercase tracking-[0.25em] sm:tracking-[0.35em] text-[#fff0f3]/80 drop-shadow-lg leading-relaxed mix-blend-screen transition-opacity duration-1000 delay-500 px-4">
+            <p className="relative z-10 mt-6 sm:mt-8 md:mt-12 max-w-xl text-[9px] sm:text-[10px] md:text-sm font-light uppercase tracking-[0.25em] sm:tracking-[0.35em] text-[#fff0f3]/80 drop-shadow-lg leading-relaxed mix-blend-screen transition-opacity duration-1000 delay-500 px-4">
               Building the future from Northeast India.
             </p>
 
-            <div className="relative z-10 mt-8 sm:mt-10 md:mt-16 pointer-events-auto">
+            <div className="relative z-10 mt-12 sm:mt-16 md:mt-20 pointer-events-auto">
               <button 
                 onClick={() => {
                   onExplore?.();
@@ -88,10 +88,10 @@ export function FounderExperience({ onExplore }: { onExplore?: () => void }) {
                     document.getElementById('about-section')?.scrollIntoView({ behavior: 'smooth' });
                   }, 100);
                 }}
-                className="group relative inline-flex items-center justify-center overflow-hidden rounded-full border border-[#ffcadd]/30 bg-[#ffcadd]/5 px-8 py-3.5 sm:px-10 sm:py-4 text-[10px] sm:text-xs font-medium tracking-[0.25em] text-[#fff0f3] backdrop-blur-md transition-all duration-700 hover:border-[#ffcadd]/60 hover:bg-[#ffcadd]/15 hover:shadow-[0_0_30px_rgba(255,202,221,0.25)] hover:text-white focus:outline-none focus:ring-1 focus:ring-[#ffcadd]/50 active:scale-[0.98]">
-                <span className="uppercase relative z-10 transition-transform duration-500 group-hover:scale-105">Explore</span>
+                className="group relative inline-flex items-center justify-center overflow-hidden rounded-full border border-[#ffcadd]/40 bg-[#ffcadd]/5 px-8 py-3.5 sm:px-10 sm:py-4 text-[10px] sm:text-xs font-medium tracking-[0.25em] text-[#fff0f3] backdrop-blur-md transition-all duration-700 shadow-[0_0_20px_rgba(255,202,221,0.15)] hover:border-[#ffcadd]/80 hover:bg-[#ffcadd]/20 hover:shadow-[0_0_40px_rgba(255,202,221,0.4)] hover:text-white focus:outline-none focus:ring-1 focus:ring-[#ffcadd]/50 active:scale-[0.98]">
+                <span className="uppercase relative z-10 transition-transform duration-500 group-hover:scale-105 drop-shadow-sm">Explore</span>
                 <div className="absolute inset-0 z-0 flex items-center justify-center pointer-events-none">
-                  <div className="h-full w-full translate-x-[-100%] bg-gradient-to-r from-transparent via-[#ffcadd]/15 to-transparent transition-transform duration-1000 ease-in-out group-hover:translate-x-[100%]"></div>
+                  <div className="h-full w-full translate-x-[-100%] bg-gradient-to-r from-transparent via-[#ffcadd]/20 to-transparent transition-transform duration-1000 ease-in-out group-hover:translate-x-[100%]"></div>
                 </div>
               </button>
             </div>

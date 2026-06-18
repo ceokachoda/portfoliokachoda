@@ -64,15 +64,20 @@ export function ProjectsSection() {
             <div className="absolute inset-0 bg-gradient-to-br from-[#ffcadd]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
 
             {/* Mobile Image (Top) & Desktop Image (Right or Left alternating) */}
-            <div className={`w-full lg:w-[45%] relative min-h-[250px] sm:min-h-[300px] md:min-h-[400px] flex items-center justify-center bg-black/20 overflow-hidden ${idx % 2 !== 0 ? 'lg:order-first' : 'lg:order-last border-l border-white/10'}`}>
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10 lg:hidden pointer-events-none" />
+            <div className={`w-full lg:w-[45%] relative min-h-[250px] sm:min-h-[300px] md:min-h-[400px] flex items-center justify-center bg-gradient-to-br from-[#ffcadd]/5 via-black/40 to-black overflow-hidden p-6 lg:p-10 ${idx % 2 !== 0 ? 'lg:order-first' : 'lg:order-last lg:border-l border-[#ffcadd]/10'}`}>
+              {/* Decorative background glow behind image */}
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] bg-[#ffcadd]/10 blur-[80px] rounded-full pointer-events-none z-0" />
               
-              <Image 
-                src={project.image} 
-                alt={`${project.name} preview`} 
-                fill 
-                className="object-cover object-center transition-transform duration-1000 group-hover:scale-105 group-hover:brightness-110 z-0" 
-              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-20 lg:hidden pointer-events-none" />
+              
+              <div className="relative w-full h-full z-10 transition-transform duration-1000 group-hover:scale-105 group-hover:brightness-110">
+                <Image 
+                  src={project.image} 
+                  alt={`${project.name} preview`} 
+                  fill 
+                  className="object-contain object-center drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)]" 
+                />
+              </div>
             </div>
 
             {/* Content Area */}

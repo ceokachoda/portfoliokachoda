@@ -29,7 +29,7 @@ export function CinematicShell() {
 
   return (
     <main className="relative min-h-dvh overflow-x-hidden bg-ink-950 text-white selection:bg-pink-500/30 scroll-smooth">
-      <SiteChrome />
+      <SiteChrome isExplored={isExplored} />
       <FounderExperience onExplore={() => setIsExplored(true)} />
       
       <div className={`transition-all duration-[1500ms] ease-out ${isExplored ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-24 pointer-events-none'}`}>
