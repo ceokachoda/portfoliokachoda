@@ -1,0 +1,13 @@
+.next
+.next-swc-cache
+.npm-cache
+node_modules
+out
+dist
+.env
+.env.local
+.env.*.local
+*.log
+*.tsbuildinfo
+.chrome-profile*  
+artifacts/ 
