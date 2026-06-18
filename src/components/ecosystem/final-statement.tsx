@@ -1,14 +1,8 @@
 "use client";
 
-export function FinalStatement() {
-  const handleScrollToContact = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault();
-    const contactSection = document.getElementById("contact-section");
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: "smooth" });
-    }
-  };
+import Link from "next/link";
 
+export function FinalStatement() {
   return (
     <section className="relative w-full py-32 md:py-48 flex flex-col items-center justify-center text-center overflow-hidden">
       {/* Ambient Lighting */}
@@ -24,9 +18,8 @@ export function FinalStatement() {
           </p>
         </div>
 
-        <a 
-          href="#contact-section"
-          onClick={handleScrollToContact}
+        <Link 
+          href="/contact"
           className="group relative inline-flex items-center justify-center px-10 py-5 rounded-full overflow-hidden transition-transform duration-500 hover:scale-105"
         >
           {/* Button Background & Glow */}
@@ -36,7 +29,7 @@ export function FinalStatement() {
           <span className="relative z-10 text-ink-950 font-display text-sm md:text-base font-bold uppercase tracking-[0.2em]">
             Let&apos;s Build The Future
           </span>
-        </a>
+        </Link>
       </div>
     </section>
   );

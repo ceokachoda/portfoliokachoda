@@ -3,7 +3,7 @@ export const siteConfig = {
   title: "Karan Malakar | Founder of WeDrip Ecosystem",
   description:
     "Founder, entrepreneur and product builder from Northeast India. Building WeDrip, FyneStudy, FlowCOS, Kaizen Cafe, NEHR and future digital infrastructure.",
-  url: "https://karanmalakar.com",
+  url: "https://karanmalakar.in",
   region: "Northeast India",
   ecosystem: "WeDrip"
 } as const;

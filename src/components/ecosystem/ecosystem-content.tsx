@@ -3,7 +3,6 @@ import { LoveSection } from "./love-section";
 import { DigitalFootprint } from "./digital-footprint";
 import { JourneyTimeline } from "./journey-timeline";
 import { FinalStatement } from "./final-statement";
-import { ContactSection } from "./contact-section";
 import { SiteFooter } from "@/components/layout/site-footer";
 
 export function EcosystemContent() {
@@ -18,7 +17,6 @@ export function EcosystemContent() {
         <DigitalFootprint />
         <JourneyTimeline />
         <FinalStatement />
-        <ContactSection />
       </div>
       <SiteFooter />
     </div>

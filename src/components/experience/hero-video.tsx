@@ -25,6 +25,7 @@ export function HeroVideo({ onReady }: HeroVideoProps) {
         <video
           ref={videoRef}
           src="/videos/hero.mp4"
+          poster="/og/karan-malakar-founder-portfolio.png"
           autoPlay
           muted
           loop

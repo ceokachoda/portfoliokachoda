@@ -11,12 +11,12 @@ export const organizationSchema = {
     name: "Karan Malakar"
   },
   brand: [
-    { "@type": "Brand", name: "WeDrip OS" },
-    { "@type": "Brand", name: "FlowCOS" },
-    { "@type": "Brand", name: "FyneStudy" },
-    { "@type": "Brand", name: "SUHASHI POS" },
-    { "@type": "Brand", name: "Northeast Home Rentals (NEHR)" },
-    { "@type": "Brand", name: "Kaizen Cafe" }
+    { "@type": "Brand", name: "WeDrip OS", description: "Operating System" },
+    { "@type": "Brand", name: "FlowCOS", description: "Operating system" },
+    { "@type": "Brand", name: "FyneStudy", description: "Coaching OS" },
+    { "@type": "Brand", name: "SUHASHI POS", description: "FlowCOS product" },
+    { "@type": "Brand", name: "Northeast Home Rentals", alternateName: "NEHR", description: "Housing technology initiative" },
+    { "@type": "Brand", name: "Kaizen Cafe", description: "Hospitality venture" }
   ]
 };
 
