@@ -57,7 +57,7 @@ export function ProjectsSection() {
         {projects.map((project, idx) => (
           <div 
             key={idx} 
-            className="group relative flex flex-col lg:flex-row items-stretch rounded-[2rem] overflow-hidden bg-black/40 border border-white/10 hover:border-white/20 hover:bg-black/60 transition-all duration-700 shadow-[0_8px_30px_rgba(0,0,0,0.4)] animate-fade-up" 
+            className="group relative flex flex-col lg:flex-row items-stretch rounded-[2rem] overflow-hidden bg-black/40 backdrop-blur-[20px] border border-[#ffcadd]/10 hover:border-[#ffcadd]/30 hover:bg-black/60 transition-all duration-700 shadow-[0_8px_32px_rgba(255,202,221,0.03)] hover:shadow-[0_8px_32px_rgba(255,202,221,0.1)] animate-fade-up" 
             style={{ animationDelay: `${idx * 150}ms` }}
           >
             {/* Subtle glow behind the card */}

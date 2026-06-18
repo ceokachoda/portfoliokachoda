@@ -21,48 +21,48 @@ export function AboutSection() {
 
       <div className="grid grid-cols-1 md:grid-cols-12 gap-5 md:gap-8">
         {/* Founder Story - Large Editorial Block */}
-        <div className="md:col-span-8 rounded-[2rem] border border-white/20 bg-black/20 backdrop-blur-[20px] p-6 sm:p-8 md:p-12 overflow-hidden relative group animate-fade-up shadow-[0_8px_30px_rgb(0,0,0,0.12)]" style={{ animationDelay: '100ms' }}>
+        <div className="md:col-span-8 rounded-[2rem] border border-[#ffcadd]/10 bg-black/40 backdrop-blur-[20px] p-6 sm:p-8 md:p-12 overflow-hidden relative group animate-fade-up shadow-[0_8px_32px_rgba(255,202,221,0.03)]" style={{ animationDelay: '100ms' }}>
           <div className="absolute inset-0 bg-gradient-to-br from-[#ffcadd]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
           <h3 className="text-[10px] md:text-xs tracking-[0.3em] text-[#ffcadd] uppercase mb-6 md:mb-8 drop-shadow-md">The Founder Story</h3>
           <div className="text-base sm:text-lg md:text-xl font-normal leading-[1.6] sm:leading-[1.8] text-white/90 max-w-3xl space-y-5 md:space-y-6 drop-shadow-sm">
             <p className="first-letter:text-5xl sm:first-letter:text-6xl first-letter:font-display first-letter:text-[#ffcadd] first-letter:mr-2 first-letter:float-left first-letter:leading-none">
-              I didn&apos;t start with a massive master plan. I started with a simple curiosity about how the web works and a deep desire to build things. When I realized that Northeast India needed better digital and physical infrastructure, I stopped waiting for someone else to build it.
+              There was no master plan in the beginning—just a genuine curiosity about how the web worked, and a desire to build things that matter. When I saw the gap in digital and physical infrastructure here in Northeast India, I realized I couldn&apos;t just wait around for someone else to fix it. So I started building.
             </p>
             <p>
-              Today, my focus is entirely on WeDrip—an ecosystem that bridges technology, education, hospitality, and housing. It&apos;s ambitious, but it&apos;s exactly what I want to dedicate my life to building.
+              Today, my entire focus is on WeDrip. We&apos;re bridging technology, education, hospitality, and housing. It&apos;s a massive undertaking, but it&apos;s the exact problem I want to spend my life solving.
             </p>
             <p>
-              And even as the ecosystem grows, I still write code, design interfaces, and build the frontend of my products. I believe founders should stay as close to the craft as possible.
+              And even as the ecosystem grows, I&apos;m still the one writing the code, designing the interfaces, and obsessing over the frontend. A founder&apos;s place is in the trenches, as close to the craft as possible.
             </p>
           </div>
         </div>
 
         {/* Vision */}
-        <div className="md:col-span-4 rounded-[2rem] border border-white/20 bg-black/20 backdrop-blur-[20px] p-6 sm:p-8 md:p-10 overflow-hidden relative group animate-fade-up shadow-[0_8px_30px_rgb(0,0,0,0.12)]" style={{ animationDelay: '200ms' }}>
+        <div className="md:col-span-4 rounded-[2rem] border border-[#ffcadd]/10 bg-black/40 backdrop-blur-[20px] p-6 sm:p-8 md:p-10 overflow-hidden relative group animate-fade-up shadow-[0_8px_32px_rgba(255,202,221,0.03)]" style={{ animationDelay: '200ms' }}>
           <h3 className="text-[10px] md:text-xs tracking-[0.3em] text-[#ffcadd] uppercase mb-5 md:mb-6 drop-shadow-md">Vision</h3>
           <p className="text-sm md:text-base font-normal leading-[1.6] sm:leading-[1.8] text-white/90 drop-shadow-sm">
-            I want to prove that world-class innovation can emerge from Northeast India. It&apos;s not just about scaling a business; it&apos;s about building an ecosystem that actually matters to the people using it.
+            Innovation isn&apos;t geography-bound. My goal is to show that truly world-class products can be built right here in Northeast India. It&apos;s not about hyper-growth for the sake of it; it&apos;s about creating something deeply useful for the people who interact with our products every day.
           </p>
         </div>
 
         {/* Philosophy */}
-        <div className="md:col-span-4 rounded-[2rem] border border-white/20 bg-black/20 backdrop-blur-[20px] p-6 sm:p-8 md:p-10 overflow-hidden relative group animate-fade-up shadow-[0_8px_30px_rgb(0,0,0,0.12)]" style={{ animationDelay: '300ms' }}>
+        <div className="md:col-span-4 rounded-[2rem] border border-[#ffcadd]/10 bg-black/40 backdrop-blur-[20px] p-6 sm:p-8 md:p-10 overflow-hidden relative group animate-fade-up shadow-[0_8px_32px_rgba(255,202,221,0.03)]" style={{ animationDelay: '300ms' }}>
           <h3 className="text-[10px] md:text-xs tracking-[0.3em] text-[#ffcadd] uppercase mb-5 md:mb-6 drop-shadow-md">Philosophy</h3>
           <p className="text-sm md:text-base font-normal leading-[1.6] sm:leading-[1.8] text-white/90 italic drop-shadow-sm">
-            &quot;Startups come and go, but ecosystems remain. I&apos;m not interested in building a single app. I want to build interconnected products that create lasting opportunities for my region.&quot;
+            &quot;Startups die. Ecosystems endure. I don&apos;t want to build just another app. I want to build interconnected platforms that actually leave our region better than we found it.&quot;
           </p>
         </div>
 
         {/* Current Mission - Spans across */}
-        <div className="md:col-span-8 rounded-[2rem] border border-[#ffcadd]/30 bg-[#ffcadd]/5 backdrop-blur-[20px] p-6 sm:p-8 md:p-10 overflow-hidden relative group animate-fade-up shadow-[0_8px_30px_rgb(0,0,0,0.12)]" style={{ animationDelay: '400ms' }}>
+        <div className="md:col-span-8 rounded-[2rem] border border-[#ffcadd]/15 bg-[#ffcadd]/[0.02] backdrop-blur-[20px] p-6 sm:p-8 md:p-10 overflow-hidden relative group animate-fade-up shadow-[0_8px_32px_rgba(255,202,221,0.04)]" style={{ animationDelay: '400ms' }}>
           <div className="absolute top-0 right-0 w-48 h-48 sm:w-64 sm:h-64 bg-[#ffcadd]/10 blur-[100px] rounded-full mix-blend-screen pointer-events-none" />
           <h3 className="text-[10px] md:text-xs tracking-[0.3em] text-[#ffcadd] uppercase mb-5 md:mb-6 drop-shadow-md">The Mission</h3>
           <h4 className="font-display text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium leading-[1.4] sm:leading-snug text-white max-w-4xl drop-shadow-md">
-            To build products that solve real problems in Northeast India, and to do it with the highest standard of design and technology.
+            Solving hard, real-world problems in Northeast India—and doing it without compromising on the highest standards of engineering and design.
           </h4>
           <div className="mt-6 sm:mt-8 pt-6 sm:pt-8 border-t border-white/10 flex flex-wrap gap-2 sm:gap-4">
             {["Growing WeDrip", "Building WeDrip OS", "Frontend Engineering", "Digital Experiences", "Client Startups", "Systems that Scale"].map((focus) => (
-              <span key={focus} className="text-[10px] sm:text-xs uppercase tracking-[0.15em] sm:tracking-widest text-white/50 bg-white/5 px-3 py-1.5 sm:px-4 sm:py-2 rounded-md">
+              <span key={focus} className="text-[10px] sm:text-xs uppercase tracking-[0.15em] sm:tracking-widest text-white/50 bg-white/5 px-3 py-1.5 sm:px-4 sm:py-2 rounded-md border border-white/5">
                 {focus}
               </span>
             ))}

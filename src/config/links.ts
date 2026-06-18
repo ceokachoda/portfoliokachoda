@@ -3,7 +3,7 @@ export const externalLinks = {
     github: "https://github.com/ceokachoda",
     linkedin: "https://www.linkedin.com/in/karan-malakar-16b213401",
     instagram: "https://www.instagram.com/karanmaran_xd",
-    email: "mailto:contact@karanmalakar.com", // Fallback, update if specific email provided
+    email: "mailto:karanmalakar55@gmail.com", // Fallback, update if specific email provided
   },
   ecosystem: {
     wedrip: "https://wedrip.xyz",

@@ -27,7 +27,7 @@ export function ContactSection() {
         
         {/* Left Side: Headline & Form */}
         <div className="lg:w-1/2 relative z-10">
-          <div className="absolute -inset-x-6 -inset-y-4 bg-black/10 backdrop-blur-[12px] -z-10 rounded-3xl opacity-0 md:opacity-100" />
+          <div className="absolute -inset-x-6 -inset-y-4 bg-black/20 backdrop-blur-[20px] -z-10 rounded-[2rem] border border-[#ffcadd]/5 opacity-0 md:opacity-100 shadow-[0_8px_32px_rgba(255,202,221,0.02)]" />
           <h2 className="font-display text-5xl md:text-7xl lg:text-[7rem] leading-[0.9] font-medium tracking-[0.05em] text-white mb-8 drop-shadow-xl">
             Let&apos;s Build <br/>
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ffcadd] to-white/90 drop-shadow-sm">The Future.</span>
@@ -51,7 +51,7 @@ export function ContactSection() {
               <input 
                 type="email" 
                 id="email" 
-                placeholder="john@example.com"
+                placeholder="karanmalakar55@gmail.com"
                 className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-sm text-white placeholder:text-white/20 focus:outline-none focus:border-[#ffcadd]/50 focus:bg-white/10 transition-all duration-300"
               />
             </div>
@@ -81,7 +81,7 @@ export function ContactSection() {
                 href={social.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-center gap-6 p-6 rounded-3xl border border-white/10 bg-white/[0.02] backdrop-blur-[20px] hover:bg-white/[0.05] hover:border-white/30 hover:-translate-y-1 transition-all duration-500"
+                className="group flex items-center gap-6 p-6 rounded-[2rem] border border-[#ffcadd]/10 bg-black/40 backdrop-blur-[20px] hover:bg-black/60 hover:border-[#ffcadd]/30 hover:-translate-y-1 hover:shadow-[0_8px_32px_rgba(255,202,221,0.05)] transition-all duration-500"
                 style={{ animationDelay: `${idx * 100 + 200}ms` }}
               >
                 <div className="text-white/50 group-hover:text-[#ffcadd] transition-colors duration-300">
@@ -97,10 +97,10 @@ export function ContactSection() {
             ))}
           </div>
 
-          <div className="p-8 rounded-3xl border border-[#ffcadd]/20 bg-gradient-to-br from-[#ffcadd]/5 to-transparent backdrop-blur-md">
+          <div className="p-8 rounded-[2rem] border border-[#ffcadd]/10 bg-black/40 backdrop-blur-[20px] shadow-[0_8px_32px_rgba(255,202,221,0.03)] hover:border-[#ffcadd]/30 hover:shadow-[0_8px_32px_rgba(255,202,221,0.1)] transition-all duration-500">
             <h4 className="text-[10px] uppercase tracking-[0.2em] text-[#ffcadd] mb-2">Direct Email</h4>
-            <a href={externalLinks.social.email} className="text-sm md:text-base text-white hover:text-[#ffcadd] transition-colors duration-300">
-              karanmalakar@wedrip.in
+            <a href="mailto:karanmalakar55@gmail.com" className="text-sm md:text-base text-white hover:text-[#ffcadd] transition-colors duration-300">
+              karanmalakar55@gmail.com
             </a>
           </div>
         </div>

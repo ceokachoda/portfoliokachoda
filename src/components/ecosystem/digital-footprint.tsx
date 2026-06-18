@@ -43,7 +43,7 @@ export function DigitalFootprint() {
             href={social.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="group relative flex flex-col items-center justify-center p-10 rounded-3xl border border-white/10 bg-black/20 backdrop-blur-[20px] transition-all duration-500 hover:-translate-y-2 hover:bg-black/40 hover:border-white/30 hover:shadow-[0_20px_40px_-15px_rgba(255,183,197,0.2)] animate-fade-up overflow-hidden"
+            className="group relative flex flex-col items-center justify-center p-10 rounded-[2rem] border border-[#ffcadd]/10 bg-black/40 backdrop-blur-[20px] transition-all duration-500 hover:-translate-y-2 hover:bg-black/60 hover:border-[#ffcadd]/30 hover:shadow-[0_20px_40px_-15px_rgba(255,202,221,0.2)] animate-fade-up overflow-hidden"
             style={{ animationDelay: `${idx * 150}ms` }}
           >
             {/* Hover Glow */}
