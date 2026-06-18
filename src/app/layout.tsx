@@ -15,9 +15,9 @@ export const metadata: Metadata = {
   authors: [{ name: "Karan Malakar" }],
   creator: "Karan Malakar",
   publisher: "WeDrip Ecosystem",
-  keywords: ["Karan Malakar", "WeDrip", "WeDrip OS", "FlowCOS", "FyneStudy", "NEHR", "Kaizen Cafe", "Shillong", "Guwahati", "Northeast India"],
+  keywords: ["Karan Malakar", "Karan Malakar Shillong", "Karan Malakar Guwahati", "Karan Malakar WeDrip", "WeDrip", "WeDrip OS", "FlowCOS", "FyneStudy", "SUHASHI POS", "Northeast Home Rentals", "NEHR", "Kaizen Cafe", "Kaizen Guwahati", "Founder from Northeast India", "Entrepreneur from Meghalaya", "Product Builder Northeast India"],
   alternates: {
-    canonical: "/"
+    canonical: siteConfig.url
   },
   openGraph: {
     type: "website",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
         url: "/og/karan-malakar-founder-portfolio.png",
         width: 1200,
         height: 630,
-        alt: "Karan Malakar founder portfolio"
+        alt: "Karan Malakar - Founder of WeDrip Ecosystem"
       }
     ]
   },

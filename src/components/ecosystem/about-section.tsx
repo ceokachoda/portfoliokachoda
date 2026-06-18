@@ -29,10 +29,10 @@ export function AboutSection() {
               There was no master plan in the beginning—just a genuine curiosity about how the web worked, and a desire to build things that matter. When I saw the gap in digital and physical infrastructure here in Northeast India, I realized I couldn&apos;t just wait around for someone else to fix it. So I started building.
             </p>
             <p>
-              Today, my entire focus is on WeDrip. We&apos;re bridging technology, education, hospitality, and housing. It&apos;s a massive undertaking, but it&apos;s the exact problem I want to spend my life solving.
+              Today, my entire focus as a founder and entrepreneur from Northeast India is on building the WeDrip Ecosystem. Through platforms like WeDrip OS, FyneStudy, FlowCOS, Kaizen Cafe, and NEHR (Northeast Home Rentals), we&apos;re bridging technology, education, hospitality, and housing across Shillong, Guwahati, and beyond. It&apos;s a massive undertaking, but it&apos;s the exact problem I want to spend my life solving.
             </p>
             <p>
-              And even as the ecosystem grows, I&apos;m still the one writing the code, designing the interfaces, and obsessing over the frontend. A founder&apos;s place is in the trenches, as close to the craft as possible.
+              And even as the WeDrip ecosystem grows, I&apos;m still the one writing the code, designing the interfaces, and obsessing over the frontend. A product builder&apos;s place is in the trenches, as close to the craft as possible.
             </p>
           </div>
         </div>

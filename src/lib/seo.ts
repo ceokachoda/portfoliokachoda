@@ -1,30 +1,58 @@
 import { siteConfig } from "@/config/site";
 
+export const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "WeDrip Ecosystem",
+  url: "https://wedrip.xyz",
+  logo: "https://wedrip.xyz/logo.png",
+  founder: {
+    "@type": "Person",
+    name: "Karan Malakar"
+  },
+  brand: [
+    { "@type": "Brand", name: "WeDrip OS" },
+    { "@type": "Brand", name: "FlowCOS" },
+    { "@type": "Brand", name: "FyneStudy" },
+    { "@type": "Brand", name: "SUHASHI POS" },
+    { "@type": "Brand", name: "Northeast Home Rentals (NEHR)" },
+    { "@type": "Brand", name: "Kaizen Cafe" }
+  ]
+};
+
 export const personSchema = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: "Karan Malakar",
   url: siteConfig.url,
-  jobTitle: "Student Entrepreneur, CEO & Co-Founder",
+  jobTitle: "Founder, CEO & Product Builder",
+  description: siteConfig.description,
   address: {
     "@type": "PostalAddress",
-    addressRegion: siteConfig.region,
+    addressLocality: "Shillong",
+    addressRegion: "Meghalaya",
     addressCountry: "IN"
   },
-  affiliation: {
+  worksFor: {
     "@type": "Organization",
-    name: siteConfig.ecosystem
+    name: "WeDrip Ecosystem"
   },
   alumniOf: {
     "@type": "CollegeOrUniversity",
     name: "Royal Global University"
   },
   knowsAbout: [
+    "Product Building",
+    "Startup Ecosystems",
     "Artificial Intelligence",
-    "Technology businesses",
-    "Founder-led ecosystems",
-    "Northeast India",
-    siteConfig.ecosystem
+    "Frontend Engineering",
+    "WeDrip",
+    "FyneStudy",
+    "FlowCOS"
+  ],
+  sameAs: [
+    "https://github.com/ceokachoda",
+    "https://www.linkedin.com/in/karan-malakar-16b213401"
   ]
 };
 
@@ -34,5 +62,9 @@ export const websiteSchema = {
   name: siteConfig.name,
   url: siteConfig.url,
   description: siteConfig.description,
-  inLanguage: "en-IN"
+  inLanguage: "en-IN",
+  publisher: {
+    "@type": "Organization",
+    name: "WeDrip Ecosystem"
+  }
 };
