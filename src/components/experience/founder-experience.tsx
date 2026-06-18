@@ -44,11 +44,11 @@ export function FounderExperience() {
 
       <div
         className={cn(
-          "pointer-events-none relative z-20 flex min-h-dvh flex-col items-center justify-center px-5 pt-20 pb-16 text-center transition-all duration-[2000ms] ease-out sm:px-8 md:pt-28 lg:px-12",
+          "pointer-events-none relative z-20 flex min-h-dvh flex-col items-center justify-center px-5 pt-20 md:pt-28 pb-16 md:pb-24 text-center transition-all duration-[2000ms] ease-out sm:px-8 lg:px-12",
           introComplete ? "opacity-100 translate-y-0 scale-100" : "opacity-0 translate-y-8 scale-[0.98]"
         )}
       >
-        <div className="mx-auto w-full max-w-site flex flex-col items-center justify-center mt-12 md:mt-24">
+        <div className="mx-auto w-full max-w-site flex flex-col items-center justify-center mt-0 md:mt-16">
           <div className="relative mx-auto max-w-5xl flex flex-col items-center justify-center">
             <style>{`
               @keyframes cinematic-shimmer {
@@ -60,32 +60,32 @@ export function FounderExperience() {
             `}</style>
 
             {/* The primary text layer: warm white base with elegant light reflections and pink edge */}
-            <h1 className="relative z-10 w-full font-display text-[clamp(1.8rem,9vw,8.5rem)] font-medium uppercase leading-[0.9] tracking-[0.18em] text-transparent bg-clip-text bg-gradient-to-b from-[#ffffff] via-[#fff5f7] to-[#ffcadd]/80 drop-shadow-2xl mix-blend-plus-lighter title-shimmer text-edge-pink break-words">
+            <h1 className="relative z-10 w-full font-display text-[clamp(2.2rem,9vw,8.5rem)] sm:text-[clamp(2.5rem,9vw,8.5rem)] md:text-[clamp(3rem,9vw,8.5rem)] font-medium uppercase leading-[1] tracking-[0.18em] text-transparent bg-clip-text bg-gradient-to-b from-[#ffffff] via-[#fff5f7] to-[#ffcadd]/80 drop-shadow-2xl mix-blend-plus-lighter title-shimmer text-edge-pink break-words px-2">
               {founderProfile.name}
             </h1>
             {/* The environment-reactive layer: strongly picks up background colors like lanterns and blossoms */}
-            <h1 className="absolute top-0 z-20 w-full font-display text-[clamp(1.8rem,9vw,8.5rem)] font-medium uppercase leading-[0.9] tracking-[0.18em] text-[#ffe4e9]/50 mix-blend-overlay pointer-events-none break-words">
+            <h1 className="absolute top-0 z-20 w-full font-display text-[clamp(2.2rem,9vw,8.5rem)] sm:text-[clamp(2.5rem,9vw,8.5rem)] md:text-[clamp(3rem,9vw,8.5rem)] font-medium uppercase leading-[1] tracking-[0.18em] text-[#ffe4e9]/50 mix-blend-overlay pointer-events-none break-words px-2">
               {founderProfile.name}
             </h1>
             {/* Additional baby pink core highlight to ensure visibility across varied video backgrounds */}
-            <h1 className="absolute top-0 z-0 w-full font-display text-[clamp(1.8rem,9vw,8.5rem)] font-medium uppercase leading-[0.9] tracking-[0.18em] text-[#ffcadd]/30 blur-[8px] mix-blend-screen pointer-events-none break-words">
+            <h1 className="absolute top-0 z-0 w-full font-display text-[clamp(2.2rem,9vw,8.5rem)] sm:text-[clamp(2.5rem,9vw,8.5rem)] md:text-[clamp(3rem,9vw,8.5rem)] font-medium uppercase leading-[1] tracking-[0.18em] text-[#ffcadd]/30 blur-[8px] mix-blend-screen pointer-events-none break-words px-2">
               {founderProfile.name}
             </h1>
             {/* The ambient glow layer: soft cherry blossom pink bloom that reacts to underlying brightness */}
-            <h1 className="absolute top-0 z-0 w-full font-display text-[clamp(1.8rem,9vw,8.5rem)] font-medium uppercase leading-[0.9] tracking-[0.18em] text-[#ff9ebd]/60 blur-[24px] mix-blend-color-dodge transition-all duration-1000 pointer-events-none break-words">
+            <h1 className="absolute top-0 z-0 w-full font-display text-[clamp(2.2rem,9vw,8.5rem)] sm:text-[clamp(2.5rem,9vw,8.5rem)] md:text-[clamp(3rem,9vw,8.5rem)] font-medium uppercase leading-[1] tracking-[0.18em] text-[#ff9ebd]/60 blur-[24px] mix-blend-color-dodge transition-all duration-1000 pointer-events-none break-words px-2">
               {founderProfile.name}
             </h1>
 
-            <p className="relative z-10 mt-8 md:mt-10 max-w-xl text-[10px] sm:text-xs md:text-sm font-light uppercase tracking-[0.35em] text-[#fff0f3]/80 drop-shadow-lg leading-relaxed mix-blend-screen transition-opacity duration-1000 delay-500">
+            <p className="relative z-10 mt-6 sm:mt-8 md:mt-10 max-w-xl text-[9px] sm:text-[10px] md:text-sm font-light uppercase tracking-[0.25em] sm:tracking-[0.35em] text-[#fff0f3]/80 drop-shadow-lg leading-relaxed mix-blend-screen transition-opacity duration-1000 delay-500 px-4">
               Building the future from Northeast India.
             </p>
 
-            <div className="relative z-10 mt-12 md:mt-16 pointer-events-auto">
+            <div className="relative z-10 mt-8 sm:mt-10 md:mt-16 pointer-events-auto">
               <button 
                 onClick={() => {
                   document.getElementById('about-section')?.scrollIntoView({ behavior: 'smooth' });
                 }}
-                className="group relative inline-flex items-center justify-center overflow-hidden rounded-full border border-white/10 bg-white/5 px-10 py-4 text-[10px] sm:text-xs font-medium tracking-[0.25em] text-white/90 backdrop-blur-md transition-all duration-500 hover:border-white/30 hover:bg-white/10 hover:shadow-[0_0_30px_-5px_rgba(255,255,255,0.2)] hover:text-white focus:outline-none focus:ring-1 focus:ring-white/30 active:scale-[0.98]">
+                className="group relative inline-flex items-center justify-center overflow-hidden rounded-full border border-white/10 bg-white/5 px-8 py-3.5 sm:px-10 sm:py-4 text-[10px] sm:text-xs font-medium tracking-[0.25em] text-white/90 backdrop-blur-md transition-all duration-500 hover:border-white/30 hover:bg-white/10 hover:shadow-[0_0_30px_-5px_rgba(255,255,255,0.2)] hover:text-white focus:outline-none focus:ring-1 focus:ring-white/30 active:scale-[0.98]">
                 <span className="uppercase relative z-10 transition-transform duration-500 group-hover:scale-105">Explore</span>
                 <div className="absolute inset-0 z-0 flex items-center justify-center pointer-events-none">
                   <div className="h-full w-full translate-x-[-100%] bg-gradient-to-r from-transparent via-white/10 to-transparent transition-transform duration-1000 ease-in-out group-hover:translate-x-[100%]"></div>

@@ -85,16 +85,16 @@ function VentureCard({ venture, index }: { venture: Venture, index: number }) {
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.8, delay: index * 0.15, ease: [0.16, 1, 0.3, 1] }}
       whileHover={{ y: -8, scale: 1.02 }}
-      className="group relative rounded-2xl border border-white/10 bg-black/40 p-8 shadow-[0_8px_32px_rgba(0,0,0,0.4)] backdrop-blur-xl transition-all duration-500 hover:border-pink-500/30 hover:bg-black/50 hover:shadow-[0_0_40px_rgba(255,79,134,0.15)] overflow-hidden"
+      className="group relative rounded-2xl border border-white/10 bg-black/40 p-6 sm:p-8 shadow-[0_8px_32px_rgba(0,0,0,0.4)] backdrop-blur-xl transition-all duration-500 hover:border-pink-500/30 hover:bg-black/50 hover:shadow-[0_0_40px_rgba(255,79,134,0.15)] overflow-hidden flex flex-col h-full"
     >
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-pink-500/0 to-pink-500/0 opacity-0 transition-opacity duration-500 group-hover:from-pink-500/5 group-hover:opacity-100" />
       
       <div className="relative z-10 flex h-full flex-col">
-        <div className="mb-6 flex items-start justify-between gap-4">
+        <div className="mb-5 md:mb-6 flex items-start justify-between gap-3 md:gap-4">
           
           {/* Circular Logo Container */}
           {venture.logoUrl ? (
-            <div className="relative flex h-16 w-16 shrink-0 items-center justify-center overflow-hidden rounded-full border border-white/10 bg-white/5 p-1 backdrop-blur-md shadow-[0_4px_20px_rgba(255,183,197,0.1)] transition-all duration-500 group-hover:scale-110 group-hover:border-pink-500/30 group-hover:bg-white/10 group-hover:shadow-[0_4px_25px_rgba(255,183,197,0.3)]">
+            <div className="relative flex h-12 w-12 sm:h-16 sm:w-16 shrink-0 items-center justify-center overflow-hidden rounded-full border border-white/10 bg-white/5 p-1 backdrop-blur-md shadow-[0_4px_20px_rgba(255,183,197,0.1)] transition-all duration-500 group-hover:scale-110 group-hover:border-pink-500/30 group-hover:bg-white/10 group-hover:shadow-[0_4px_25px_rgba(255,183,197,0.3)]">
               {/* Pink reflection glow behind logo */}
               <div className="absolute inset-0 bg-pink-400/20 opacity-0 transition-opacity duration-500 group-hover:opacity-100 blur-md" />
               <div className="relative h-full w-full rounded-full overflow-hidden">
@@ -107,37 +107,37 @@ function VentureCard({ venture, index }: { venture: Venture, index: number }) {
               </div>
             </div>
           ) : (
-            <div className="relative flex h-16 w-16 shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/5 text-2xl font-bold text-white/50 backdrop-blur-md shadow-[0_4px_20px_rgba(255,183,197,0.1)] transition-all duration-500 group-hover:scale-110 group-hover:border-pink-500/30 group-hover:bg-white/10 group-hover:text-pink-200 group-hover:shadow-[0_4px_25px_rgba(255,183,197,0.3)]">
+            <div className="relative flex h-12 w-12 sm:h-16 sm:w-16 shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/5 text-xl sm:text-2xl font-bold text-white/50 backdrop-blur-md shadow-[0_4px_20px_rgba(255,183,197,0.1)] transition-all duration-500 group-hover:scale-110 group-hover:border-pink-500/30 group-hover:bg-white/10 group-hover:text-pink-200 group-hover:shadow-[0_4px_25px_rgba(255,183,197,0.3)]">
               <div className="absolute inset-0 bg-pink-400/20 opacity-0 transition-opacity duration-500 group-hover:opacity-100 blur-md rounded-full" />
               <span className="relative z-10">{venture.name.charAt(0)}</span>
             </div>
           )}
           
           <div className="text-right">
-            <span className="inline-block rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-medium text-white/80 backdrop-blur-sm">
+            <span className="inline-block rounded-full border border-white/10 bg-white/5 px-2.5 py-1 text-[10px] sm:text-xs font-medium text-white/80 backdrop-blur-sm">
               {venture.status}
             </span>
             {venture.founded && (
-              <div className="mt-2 text-xs font-medium text-white/40">Est. {venture.founded}</div>
+              <div className="mt-1.5 md:mt-2 text-[10px] md:text-xs font-medium text-white/40">Est. {venture.founded}</div>
             )}
           </div>
         </div>
 
-        <h3 className="mb-1 font-display text-2xl font-semibold tracking-tight text-white group-hover:text-pink-100 transition-colors duration-300">
+        <h3 className="mb-1 font-display text-xl sm:text-2xl font-semibold tracking-tight text-white group-hover:text-pink-100 transition-colors duration-300">
           {venture.name}
         </h3>
-        <p className="mb-4 text-sm font-medium text-pink-300/80">{venture.category}</p>
+        <p className="mb-3 md:mb-4 text-xs sm:text-sm font-medium text-pink-300/80">{venture.category}</p>
         
-        <p className="mb-6 flex-grow text-sm leading-relaxed text-white/70">
+        <p className="mb-5 md:mb-6 flex-grow text-xs sm:text-sm leading-relaxed text-white/70">
           {venture.description}
         </p>
 
         {venture.subProducts && (
-          <div className="mb-6">
-            <h4 className="mb-2 text-xs font-semibold uppercase tracking-wider text-white/40">Sub-products</h4>
-            <div className="flex flex-wrap gap-2">
+          <div className="mb-5 md:mb-6">
+            <h4 className="mb-2 text-[10px] sm:text-xs font-semibold uppercase tracking-wider text-white/40">Sub-products</h4>
+            <div className="flex flex-wrap gap-1.5 sm:gap-2">
               {venture.subProducts.map(product => (
-                <span key={product} className="rounded-md bg-white/5 px-2 py-1 text-xs font-medium text-white/60 border border-white/5">
+                <span key={product} className="rounded-md bg-white/5 px-2 py-1 text-[10px] sm:text-xs font-medium text-white/60 border border-white/5">
                   {product}
                 </span>
               ))}
@@ -146,11 +146,11 @@ function VentureCard({ venture, index }: { venture: Venture, index: number }) {
         )}
 
         {venture.features && (
-          <div className="mb-6">
-            <h4 className="mb-2 text-xs font-semibold uppercase tracking-wider text-white/40">Features</h4>
-            <div className="flex flex-wrap gap-2">
+          <div className="mb-5 md:mb-6">
+            <h4 className="mb-2 text-[10px] sm:text-xs font-semibold uppercase tracking-wider text-white/40">Features</h4>
+            <div className="flex flex-wrap gap-1.5 sm:gap-2">
               {venture.features.map(feature => (
-                <span key={feature} className="rounded-md bg-white/5 px-2 py-1 text-xs font-medium text-white/60 border border-white/5">
+                <span key={feature} className="rounded-md bg-white/5 px-2 py-1 text-[10px] sm:text-xs font-medium text-white/60 border border-white/5">
                   {feature}
                 </span>
               ))}
@@ -164,10 +164,10 @@ function VentureCard({ venture, index }: { venture: Venture, index: number }) {
               href={venture.website} 
               target="_blank" 
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-sm font-medium text-white/90 transition-colors hover:text-pink-300"
+              className="inline-flex items-center gap-2 text-xs sm:text-sm font-medium text-white/90 transition-colors hover:text-pink-300"
             >
               Visit Website
-              <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg className="h-3.5 w-3.5 sm:h-4 sm:w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
               </svg>
             </a>
