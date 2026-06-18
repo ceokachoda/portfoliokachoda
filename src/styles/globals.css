@@ -1,3 +1,5 @@
+@import url('https://api.fontshare.com/v2/css?f[]=clash-display@200,300,400,500,600,700&f[]=satoshi@300,400,500,700,900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -8,30 +10,6 @@
   --font-inter: "Inter", system-ui, sans-serif;
   --ease-cinematic: cubic-bezier(0.16, 1, 0.3, 1);
   --site-gutter: clamp(1.25rem, 3vw, 3rem);
-}
-
-@font-face {
-  font-display: swap;
-  font-family: "Clash Display";
-  font-style: normal;
-  font-weight: 400 700;
-  src: url("/fonts/ClashDisplay-Variable.woff2") format("woff2");
-}
-
-@font-face {
-  font-display: swap;
-  font-family: "Satoshi";
-  font-style: normal;
-  font-weight: 300 900;
-  src: url("/fonts/Satoshi-Variable.woff2") format("woff2");
-}
-
-@font-face {
-  font-display: swap;
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 100 900;
-  src: url("/fonts/Inter-Variable.woff2") format("woff2");
 }
 
 * {
@@ -50,8 +28,22 @@ body {
   overflow-x: hidden;
   background: #030305;
   font-family: var(--font-satoshi);
+  font-weight: 500;
+  line-height: 1.65;
+  letter-spacing: 0.015em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+p, li, span, div {
+  color: rgba(255, 255, 255, 0.95);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+  font-weight: 600;
+  letter-spacing: -0.02em;
 }
 
 ::selection {

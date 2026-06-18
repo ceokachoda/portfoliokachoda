@@ -1,70 +1,37 @@
 "use client";
 
-import dynamic from "next/dynamic";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import { founderProfile } from "@/config/founder";
 import { cn } from "@/lib/cn";
-import {
-  type ExperienceCapabilities,
-  getExperienceCapabilities
-} from "@/lib/experience";
 import { IntroSequence } from "@/components/experience/intro-sequence";
-import { StaticExperienceFallback } from "@/components/experience/static-experience-fallback";
-
-const SceneCanvas = dynamic(
-  () => import("@/components/experience/scene/scene-canvas").then((mod) => mod.SceneCanvas),
-  {
-    ssr: false,
-    loading: () => null
-  }
-);
+import { HeroVideo } from "@/components/experience/hero-video";
 
 export function FounderExperience() {
-  const [capabilities, setCapabilities] = useState<ExperienceCapabilities | null>(null);
-  const [sceneReady, setSceneReady] = useState(false);
+  const [videoReady, setVideoReady] = useState(false);
   const [introComplete, setIntroComplete] = useState(false);
 
   useEffect(() => {
-    setCapabilities(getExperienceCapabilities());
     const params = new URLSearchParams(window.location.search);
     if (params.get("intro") === "skip") {
-      setSceneReady(true);
+      setVideoReady(true);
       setIntroComplete(true);
     }
   }, []);
 
-  const shouldUseCanvas = Boolean(
-    capabilities?.hasWebGL && capabilities.tier !== "reduced"
-  );
-
-  const status = useMemo(() => {
-    if (!capabilities) {
-      return "Reading device signal";
-    }
-
-    if (!shouldUseCanvas) {
-      return "Entering low-motion world";
-    }
-
-    return sceneReady ? "World online" : "Building cherry forest";
-  }, [capabilities, sceneReady, shouldUseCanvas]);
+  const status = videoReady ? "World online" : "Loading cinematic environment";
 
   return (
     <section
-      className="relative isolate min-h-dvh overflow-hidden bg-ink-950 text-white"
+      className="relative isolate min-h-dvh bg-transparent text-white"
       aria-label="Cinematic WeDrip ecosystem introduction"
     >
-      <div className="absolute inset-0 z-0">
-        {shouldUseCanvas && capabilities ? (
-          <SceneCanvas capabilities={capabilities} onReady={() => setSceneReady(true)} />
-        ) : (
-          <StaticExperienceFallback />
-        )}
+      <div className="fixed inset-0 z-0 pointer-events-none">
+        <HeroVideo onReady={() => setVideoReady(true)} />
       </div>
 
       {introComplete ? null : (
         <IntroSequence
-          isReady={sceneReady || !shouldUseCanvas}
+          isReady={videoReady}
           status={status}
           onComplete={() => setIntroComplete(true)}
         />
@@ -77,26 +44,53 @@ export function FounderExperience() {
 
       <div
         className={cn(
-          "pointer-events-none relative z-20 grid min-h-dvh content-end px-5 pb-8 pt-28 text-center transition duration-1000 sm:px-8 sm:pb-10 lg:px-12",
-          introComplete ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
+          "pointer-events-none relative z-20 flex min-h-dvh flex-col items-center justify-center px-5 pt-20 pb-16 text-center transition-all duration-[2000ms] ease-out sm:px-8 md:pt-28 lg:px-12",
+          introComplete ? "opacity-100 translate-y-0 scale-100" : "opacity-0 translate-y-8 scale-[0.98]"
         )}
       >
-        <div className="mx-auto w-full max-w-site">
-          <div className="mx-auto max-w-4xl">
-            <p className="text-[10px] uppercase tracking-[0.42em] text-blossom-300/86 sm:text-[11px]">
-              {founderProfile.location}
-            </p>
-            <h1 className="mt-4 font-display text-[clamp(2.65rem,6vw,5.8rem)] uppercase leading-[0.9] tracking-[0.12em] text-balance">
+        <div className="mx-auto w-full max-w-site flex flex-col items-center justify-center mt-12 md:mt-24">
+          <div className="relative mx-auto max-w-5xl flex flex-col items-center justify-center">
+            <style>{`
+              @keyframes cinematic-shimmer {
+                0%, 100% { filter: brightness(1) drop-shadow(0 0 10px rgba(255,183,197,0.15)); }
+                50% { filter: brightness(1.2) drop-shadow(0 0 25px rgba(255,183,197,0.55)); }
+              }
+              .title-shimmer { animation: cinematic-shimmer 12s ease-in-out infinite; }
+              .text-edge-pink { -webkit-text-stroke: 1px rgba(255,183,197,0.15); }
+            `}</style>
+
+            {/* The primary text layer: warm white base with elegant light reflections and pink edge */}
+            <h1 className="relative z-10 w-full font-display text-[clamp(1.8rem,9vw,8.5rem)] font-medium uppercase leading-[0.9] tracking-[0.18em] text-transparent bg-clip-text bg-gradient-to-b from-[#ffffff] via-[#fff5f7] to-[#ffcadd]/80 drop-shadow-2xl mix-blend-plus-lighter title-shimmer text-edge-pink break-words">
               {founderProfile.name}
             </h1>
-            <div className="mx-auto mt-5 grid max-w-3xl gap-3 text-sm leading-7 text-white/70 sm:grid-cols-[1.05fr_0.95fr] sm:text-base">
-              <p>
-                {founderProfile.title}. {founderProfile.role}. Building the WeDrip ecosystem from
-                Northeast India at {founderProfile.age}.
-              </p>
-              <p className="text-white/56">
-                {founderProfile.education}. Ventures: {founderProfile.ventures.slice(0, 5).join(", ")}.
-              </p>
+            {/* The environment-reactive layer: strongly picks up background colors like lanterns and blossoms */}
+            <h1 className="absolute top-0 z-20 w-full font-display text-[clamp(1.8rem,9vw,8.5rem)] font-medium uppercase leading-[0.9] tracking-[0.18em] text-[#ffe4e9]/50 mix-blend-overlay pointer-events-none break-words">
+              {founderProfile.name}
+            </h1>
+            {/* Additional baby pink core highlight to ensure visibility across varied video backgrounds */}
+            <h1 className="absolute top-0 z-0 w-full font-display text-[clamp(1.8rem,9vw,8.5rem)] font-medium uppercase leading-[0.9] tracking-[0.18em] text-[#ffcadd]/30 blur-[8px] mix-blend-screen pointer-events-none break-words">
+              {founderProfile.name}
+            </h1>
+            {/* The ambient glow layer: soft cherry blossom pink bloom that reacts to underlying brightness */}
+            <h1 className="absolute top-0 z-0 w-full font-display text-[clamp(1.8rem,9vw,8.5rem)] font-medium uppercase leading-[0.9] tracking-[0.18em] text-[#ff9ebd]/60 blur-[24px] mix-blend-color-dodge transition-all duration-1000 pointer-events-none break-words">
+              {founderProfile.name}
+            </h1>
+
+            <p className="relative z-10 mt-8 md:mt-10 max-w-xl text-[10px] sm:text-xs md:text-sm font-light uppercase tracking-[0.35em] text-[#fff0f3]/80 drop-shadow-lg leading-relaxed mix-blend-screen transition-opacity duration-1000 delay-500">
+              Building the future from Northeast India.
+            </p>
+
+            <div className="relative z-10 mt-12 md:mt-16 pointer-events-auto">
+              <button 
+                onClick={() => {
+                  document.getElementById('about-section')?.scrollIntoView({ behavior: 'smooth' });
+                }}
+                className="group relative inline-flex items-center justify-center overflow-hidden rounded-full border border-white/10 bg-white/5 px-10 py-4 text-[10px] sm:text-xs font-medium tracking-[0.25em] text-white/90 backdrop-blur-md transition-all duration-500 hover:border-white/30 hover:bg-white/10 hover:shadow-[0_0_30px_-5px_rgba(255,255,255,0.2)] hover:text-white focus:outline-none focus:ring-1 focus:ring-white/30 active:scale-[0.98]">
+                <span className="uppercase relative z-10 transition-transform duration-500 group-hover:scale-105">Explore</span>
+                <div className="absolute inset-0 z-0 flex items-center justify-center pointer-events-none">
+                  <div className="h-full w-full translate-x-[-100%] bg-gradient-to-r from-transparent via-white/10 to-transparent transition-transform duration-1000 ease-in-out group-hover:translate-x-[100%]"></div>
+                </div>
+              </button>
             </div>
           </div>
         </div>

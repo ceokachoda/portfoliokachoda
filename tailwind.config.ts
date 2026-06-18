@@ -46,7 +46,9 @@ const config: Config = {
       animation: {
         "film-grain": "film-grain 9s steps(10) infinite",
         "pulse-glow": "pulse-glow 7s ease-in-out infinite",
-        "slow-orbit": "slow-orbit 28s linear infinite"
+        "slow-orbit": "slow-orbit 28s linear infinite",
+        "fade-in": "fade-in 1s cubic-bezier(0.16, 1, 0.3, 1) forwards",
+        "fade-up": "fade-up 1s cubic-bezier(0.16, 1, 0.3, 1) forwards"
       },
       keyframes: {
         "film-grain": {
@@ -68,6 +70,14 @@ const config: Config = {
         "slow-orbit": {
           "0%": { transform: "rotate(0deg)" },
           "100%": { transform: "rotate(360deg)" }
+        },
+        "fade-in": {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" }
+        },
+        "fade-up": {
+          "0%": { opacity: "0", transform: "translateY(24px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" }
         }
       }
     }

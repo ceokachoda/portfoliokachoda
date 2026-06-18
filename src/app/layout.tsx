@@ -15,6 +15,7 @@ export const metadata: Metadata = {
   authors: [{ name: "Karan Malakar" }],
   creator: "Karan Malakar",
   publisher: "WeDrip Ecosystem",
+  keywords: ["Karan Malakar", "WeDrip", "WeDrip OS", "FlowCOS", "FyneStudy", "NEHR", "Kaizen Cafe", "Shillong", "Guwahati", "Northeast India"],
   alternates: {
     canonical: "/"
   },
